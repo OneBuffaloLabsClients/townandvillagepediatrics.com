@@ -60,7 +60,7 @@ export default function ContactPage() {
       <section className="bg-[var(--color-secondary-accent)] py-16 text-white text-center">
         <h1 className="text-4xl font-extrabold sm:text-5xl">Contact Us</h1>
         <p className="mt-4 text-lg opacity-90">
-          We're here to help. Reach out to us with any questions.
+          We&apos;re here to help. Reach out to us with any questions.
         </p>
       </section>
 
@@ -268,11 +268,8 @@ export default function ContactPage() {
           title="Town and Village Pediatrics Location"
           width="100%"
           height="100%"
-          frameBorder="0"
-          scrolling="no"
-          marginHeight={0}
-          marginWidth={0}
-          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=6044%20Main%20Street,%20Suite%20100,%20Williamsville,%20NY%2014221+(Town%20and%20Village%20Pediatrics)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          style={{ border: 0 }}
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2919.766248764093!2d-78.7295239234675!3d42.96222697114325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d3736255555555%3A0x9c9c9c9c9c9c9c9c!2s6044%20Main%20St%20%23100%2C%20Williamsville%2C%20NY%2014221!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
           className="filter grayscale-[20%] hover:grayscale-0 transition-all duration-500"
           allowFullScreen
           loading="lazy"
