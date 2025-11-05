@@ -112,25 +112,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Recognition Badge Area */}
-        <div className="mb-8 rounded-lg bg-white p-6 shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            {/* Placeholder for NCQA Logo - ideally use next/image here */}
-            <div className="flex-shrink-0 h-16 w-16 bg-gray-100 rounded-full flex items-center justify-center text-[var(--color-secondary-accent)]">
-              <i className="fa-solid fa-award text-3xl"></i>
-            </div>
-            <div>
-              <h4 className="text-base font-bold text-[var(--color-secondary-accent)] mb-1">
-                Patient-Centered Medical Home
-              </h4>
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                [cite_start]In 2017 Town and Village Pediatrics LLC was recognized as a Patient
-                Centered Medical Home by the National Committee for Quality Assurance[cite: 66].
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Copyright / Legal */}
         <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-[var(--color-text-muted)]">
           <p>
