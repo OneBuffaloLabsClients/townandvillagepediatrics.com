@@ -23,7 +23,7 @@ export default function HomePage() {
                 className="text-4xl font-extrabold tracking-tight text-[var(--color-secondary-accent)] sm:text-5xl md:text-6xl">
                 Compassionate Care for Your Little Ones
               </h1>
-              <p className="text-lg text-[var(--color-text-primary)]qy leading-relaxed max-w-xl">
+              <p className="text-lg text-[var(--color-text-primary)] leading-relaxed max-w-xl">
                 Welcome to Town & Village Pediatrics. We are dedicated to providing comprehensive,
                 personalized healthcare for your children from birth through adolescence. Our team
                 is here to partner with you every step of the way.
@@ -56,64 +56,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* --- News Section --- */}
+      {/* --- News Section (Text Only) --- */}
       <section aria-labelledby="news-heading" className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 text-center">
-            <h2
-              id="news-heading"
-              className="text-3xl font-bold text-[var(--color-secondary-accent)]">
-              Practice News & Updates
-            </h2>
-            <p className="mt-4 text-lg text-[var(--color-text-muted)]">
-              Stay up-to-date with the latest announcements from our office.
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <h2
+            id="news-heading"
+            className="text-3xl font-bold text-[var(--color-secondary-accent)] mb-8">
+            Practice News & Updates
+          </h2>
+          <div className="prose prose-lg mx-auto text-[var(--color-text-primary)]">
+            {/* Editable Content Area Start */}
+            <p>
+              Welcome to our new website! We are excited to continue providing the best care for
+              your children. Please check back here for the latest updates regarding our office
+              hours, flu clinics, and other important announcements.
             </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* News Item 1 (Placeholder) */}
-            <article className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-              <span className="mb-2 inline-block rounded-full bg-[var(--color-background-alt)] px-3 py-1 text-xs font-semibold text-[var(--color-secondary-accent)]">
-                Important
-              </span>
-              <h3 className="mb-2 text-xl font-bold text-[var(--color-text-primary)]">
-                Flu Clinics Now Open
-              </h3>
-              <p className="mb-4 text-[var(--color-text-muted)]">
-                We are now scheduling appointments for our annual flu clinics. Please call the
-                office or use the patient portal to book your child's slot.
-              </p>
-              <time className="text-sm text-[var(--color-text-muted)]">September 20, 2025</time>
-            </article>
-
-            {/* News Item 2 (Placeholder) */}
-            <article className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-              <span className="mb-2 inline-block rounded-full bg-[var(--color-background-alt)] px-3 py-1 text-xs font-semibold text-[var(--color-secondary-accent)]">
-                Office Update
-              </span>
-              <h3 className="mb-2 text-xl font-bold text-[var(--color-text-primary)]">
-                Updated Winter Hours
-              </h3>
-              <p className="mb-4 text-[var(--color-text-muted)]">
-                Starting October 1st, our winter hours will be in effect. We will be open on
-                Saturdays from 8:30 AM to 12:00 PM for urgent sick visits.
-              </p>
-              <time className="text-sm text-[var(--color-text-muted)]">September 15, 2025</time>
-            </article>
-            {/* News Item 3 (Placeholder) */}
-            <article className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-              <span className="mb-2 inline-block rounded-full bg-[var(--color-background-alt)] px-3 py-1 text-xs font-semibold text-[var(--color-secondary-accent)]">
-                Health Tip
-              </span>
-              <h3 className="mb-2 text-xl font-bold text-[var(--color-text-primary)]">
-                Back-to-School Health
-              </h3>
-              <p className="mb-4 text-[var(--color-text-muted)]">
-                As the new school year begins, make sure your child is up-to-date on all required
-                immunizations and sports physicals.
-              </p>
-              <time className="text-sm text-[var(--color-text-muted)]">August 28, 2025</time>
-            </article>
+            <p>
+              <strong>Current Update:</strong> We are now scheduling appointments for our annual flu
+              clinics. Please call the office or use the patient portal to book your child's slot.
+            </p>
+            {/* Editable Content Area End */}
           </div>
         </div>
       </section>
