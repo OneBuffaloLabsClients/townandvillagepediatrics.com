@@ -496,32 +496,6 @@ const ParentsCorner = () => {
               successes of modern medicine.
             </p>
           </div>
-
-          <div className="mt-10 pt-8 border-t border-gray-100">
-            <h4 className="font-bold mb-2 text-[var(--color-text-muted)]">Trusted Resources:</h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="http://www.cdc.gov/vaccinesafety/populations/parents.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--color-secondary-accent)] hover:underline flex items-center gap-2">
-                  CDC Vaccine Safety for Parents{' '}
-                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xs" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://www.chop.edu/service/vaccine-education-center/home.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--color-secondary-accent)] hover:underline flex items-center gap-2">
-                  CHOP Vaccine Education Center{' '}
-                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xs" />
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
     </div>
