@@ -12,11 +12,11 @@ interface PageMetadata {
 }
 
 // --- Base Metadata ---
-const BASE_URL = 'https://google.com';
-const SITE_NAME = '';
+const BASE_URL = 'https://townandvillagepediatrics.com';
+const SITE_NAME = 'Town and Village Pediatrics';
 const TWITTER_CREATOR = '';
 const GOOGLE_ADSENSE_ACCOUNT = '';
-const DEFAULT_TITLE = '';
+const DEFAULT_TITLE = 'Town and Village Pediatrics';
 const DEFAULT_DESCRIPTION = '';
 const DEFAULT_OG_IMAGE = ``;
 const DEFAULT_KEYWORDS = [''];
@@ -82,7 +82,7 @@ export function generateMetadata({
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: `${title || 'REPLACE'} - ME`,
+          alt: `${title || 'Town and Village Pediatrics'}`,
           type: 'image/png',
         },
       ],
@@ -90,9 +90,9 @@ export function generateMetadata({
       type: 'website',
     },
     ...(Object.keys(otherMetadata).length > 0 && { other: otherMetadata }),
-  };  
+  };
 
-if (TWITTER_CREATOR) {
+  if (TWITTER_CREATOR) {
     metadata.twitter = {
       card: 'summary_large_image',
       title: pageTitle,
