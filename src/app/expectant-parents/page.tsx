@@ -52,9 +52,7 @@ const ExpectantParents = () => {
       </section>
 
       {/* --- What to Expect Section --- */}
-      <section
-        className="py-16 md:py-24 bg-white"
-        aria-labelledby="what-to-expect-heading">
+      <section className="py-16 md:py-24 bg-white" aria-labelledby="what-to-expect-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <h2
             id="what-to-expect-heading"
@@ -63,9 +61,9 @@ const ExpectantParents = () => {
           </h2>
           <div className="prose prose-lg max-w-none text-[var(--color-text-primary)]">
             <p>
-              We welcome you to schedule a free prenatal visit at Town and Village Pediatrics. During
-              your visit, you will meet one of our board-certified pediatricians for an individual
-              family meeting.
+              We welcome you to schedule a free prenatal visit at Town and Village Pediatrics.
+              During your visit, you will meet one of our board-certified pediatricians for an
+              individual family meeting.
             </p>
             <p>
               We will speak with you about important decisions you will be making, such as newborn
@@ -104,12 +102,12 @@ const ExpectantParents = () => {
           <h2
             id="cta-heading"
             className="text-2xl md:text-3xl font-bold text-[var(--color-secondary-accent)] mb-6">
-            Let's Get Acquainted
+            Let&apos;s Get Acquainted
           </h2>
           <p className="text-lg text-[var(--color-text-muted)] mb-8 leading-relaxed">
             The prenatal visit is a wonderful opportunity for you and your pediatrician to become
-            acquainted before your baby's birth. We hope to be a familiar face when we come to visit
-            you and your baby at one of our affiliated hospitals!
+            acquainted before your baby&apos;s birth. We hope to be a familiar face when we come to
+            visit you and your baby at one of our affiliated hospitals!
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
