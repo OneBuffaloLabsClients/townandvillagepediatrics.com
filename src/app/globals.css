@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Color Palette - Replace THIS */
-  --color-obl-red: #e7042d;
-  --color-obl-blue: #003091;
-  --color-obl-dark-blue: #010123;
-  --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-primary-action: #8ba340; /* Town Green (Main Brand Color/CTA) */
+  --color-secondary-accent: #0077b6; /* Village Blue (Trust/Professional) */
+  --color-background-primary: #ffffff; /* Clean White (Main Background) */
+  --color-text-primary: #333333; /* Charcoal Gray (Body Text) */
+  --color-background-alt: #f4f4f4; /* Light Cloud Gray (Card/Section Backgrounds) */
+  --color-text-muted: #888888; /* Standard Light Gray (Placeholder/Muted Text) */
 }
