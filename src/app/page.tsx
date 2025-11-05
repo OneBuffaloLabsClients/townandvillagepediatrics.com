@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getHomePageData } from '@/lib/cms';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserDoctor, faAward, faBaby, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata = {
   title: 'Home | Town and Village Pediatrics',
@@ -49,7 +51,7 @@ export default async function HomePage() {
               <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-[var(--color-text-muted)]">
                 {/* Replace with: <Image src="/path/to/physician-group-photo.jpg" alt="Town and Village Pediatrics Physicians" fill className="object-cover" priority /> */}
                 <span className="text-center px-4">
-                  <i className="fa-solid fa-user-doctor text-6xl mb-4 opacity-50"></i>
+                  <FontAwesomeIcon icon={faUserDoctor} className="text-6xl mb-4 opacity-50" />
                   <br />
                   [New Picture of Physicians]
                 </span>
@@ -104,7 +106,10 @@ export default async function HomePage() {
               {/* NCQA Logo Placeholder - Replace with actual image */}
               <div className="w-64 h-64 bg-white rounded-full flex items-center justify-center shadow-md p-8">
                 <div className="text-center">
-                  <i className="fa-solid fa-award text-6xl text-[var(--color-primary-action)] mb-4"></i>
+                  <FontAwesomeIcon
+                    icon={faAward}
+                    className="text-6xl text-[var(--color-primary-action)] mb-4"
+                  />
                   <p className="text-sm font-bold text-[var(--color-secondary-accent)]">
                     NCQA RECOGNIZED PRACTICE
                   </p>
@@ -121,7 +126,7 @@ export default async function HomePage() {
         className="py-20 bg-[var(--color-secondary-accent)] text-white relative overflow-hidden">
         {/* Decorative background element */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <i className="fa-solid fa-baby text-[400px] absolute -top-20 -left-20"></i>
+          <FontAwesomeIcon icon={faBaby} className="text-[400px] absolute -top-20 -left-20" />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -133,10 +138,10 @@ export default async function HomePage() {
             learn more about our practice and how we can support your growing family.
           </p>
           <Link
-            href="/parents-corner"
+            href="/expectant-parents"
             className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-bold text-[var(--color-secondary-accent)] shadow-lg transition-all hover:bg-gray-100 hover:scale-105">
-            Visit Parents Corner
-            <i className="fa-solid fa-arrow-right ml-3"></i>
+            Learn More
+            <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
           </Link>
         </div>
       </section>
