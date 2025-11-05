@@ -2,8 +2,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 // --- Components ---
-// import { Header } from '@/components/Header';
-// import { Footer } from '@/components/Footer';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import AnalyticsInitializer from '@/components/AnalyticsInitializer';
 // --- Utils ---
 import { generateMetadata } from '@/utils/metadata';
@@ -32,9 +32,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased flex flex-col min-h-screen`}>
-        {/* <Header /> */}
+        <Header />
         <main className="flex-grow">{children}</main>
-        {/* <Footer /> */}
+        <Footer />
         <AnalyticsInitializer />
       </body>
     </html>
