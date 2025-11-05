@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getHomePageData } from '@/lib/cms';
 
 export const metadata = {
   title: 'Home | Town and Village Pediatrics',
@@ -7,7 +8,9 @@ export const metadata = {
     'Compassionate, comprehensive healthcare for children from infancy through adolescence in Williamsville, NY.',
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const data = await getHomePageData();
+
   return (
     <div className="flex flex-col">
       {/* --- Hero Section --- */}
@@ -56,26 +59,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* --- News Section (Text Only) --- */}
+      {/* --- News Section (Dynamic Text) --- */}
       <section aria-labelledby="news-heading" className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <h2
             id="news-heading"
             className="text-3xl font-bold text-[var(--color-secondary-accent)] mb-8">
-            Practice News & Updates
+            {data.news_title}
           </h2>
-          <div className="prose prose-lg mx-auto text-[var(--color-text-primary)]">
-            {/* Editable Content Area Start */}
-            <p>
-              Welcome to our new website! We are excited to continue providing the best care for
-              your children. Please check back here for the latest updates regarding our office
-              hours, flu clinics, and other important announcements.
-            </p>
-            <p>
-              <strong>Current Update:</strong> We are now scheduling appointments for our annual flu
-              clinics. Please call the office or use the patient portal to book your child's slot.
-            </p>
-            {/* Editable Content Area End */}
+          {/* whitespace-pre-wrap preserves line breaks from the CMS textarea */}
+          <div className="prose prose-lg mx-auto text-[var(--color-text-primary)] whitespace-pre-wrap">
+            {data.news_content}
           </div>
         </div>
       </section>
