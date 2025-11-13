@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getHomePageData } from '@/lib/cms';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserDoctor, faAward, faBaby, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faBaby, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata = {
   title: 'Home | Town and Village Pediatrics',

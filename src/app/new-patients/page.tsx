@@ -1,8 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import type { Metadata } from 'next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 // SEO Metadata for the page
 export const metadata: Metadata = {
