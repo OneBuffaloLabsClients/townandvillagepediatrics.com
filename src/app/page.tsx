@@ -1,4 +1,4 @@
-// import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getHomePageData } from '@/lib/cms';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -44,12 +44,13 @@ export default async function HomePage() {
             {/* Hero Image Placeholder */}
             <div className="relative h-64 overflow-hidden rounded-2xl shadow-xl sm:h-80 md:h-[500px]">
               <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-[var(--color-text-muted)]">
-                {/* Replace with: <Image src="/path/to/physician-group-photo.jpg" alt="Town and Village Pediatrics Physicians" fill className="object-cover" priority /> */}
-                <span className="text-center px-4">
-                  <FontAwesomeIcon icon={faUserDoctor} className="text-6xl mb-4 opacity-50" />
-                  <br />
-                  [New Picture of Physicians]
-                </span>
+                <Image
+                  src="/images/hero.webp"
+                  alt="Town and Village Pediatrics Physicians"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
