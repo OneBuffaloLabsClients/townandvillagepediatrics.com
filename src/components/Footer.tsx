@@ -1,4 +1,15 @@
+'use client';
+
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import {
+  faLocationDot,
+  faPhone,
+  faFax,
+  faUserNurse,
+  faLock,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +26,11 @@ const Footer = () => {
             </h2>
             <address className="not-italic space-y-3 text-sm leading-relaxed">
               <p className="flex items-start">
-                <i className="fa-solid fa-location-dot mt-1 mr-3 text-[var(--color-primary-action)]"></i>
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  className="mt-1 mr-3 text-[var(--color-primary-action)] fa-fw"
+                  aria-hidden="true"
+                />
                 <span>
                   6044 Main Street, Suite 100
                   <br />
@@ -23,7 +38,11 @@ const Footer = () => {
                 </span>
               </p>
               <p className="flex items-center">
-                <i className="fa-solid fa-phone mr-3 text-[var(--color-primary-action)]"></i>
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  className="mr-3 text-[var(--color-primary-action)] fa-fw"
+                  aria-hidden="true"
+                />
                 <a
                   href="tel:7166336988"
                   className="hover:text-[var(--color-secondary-accent)] transition-colors">
@@ -31,11 +50,20 @@ const Footer = () => {
                 </a>
               </p>
               <p className="flex items-center">
-                <i className="fa-solid fa-fax mr-3 text-[var(--color-primary-action)]"></i>
+                <FontAwesomeIcon
+                  icon={faFax}
+                  className="mr-3 text-[var(--color-primary-action)] fa-fw"
+                  aria-hidden="true"
+                />
                 <span>(716) 631-8690</span>
               </p>
               <p className="flex items-center">
-                <i className="fa-brands fa-facebook mr-3 text-[var(--color-primary-action)]"></i>
+                {/* --- THIS IS THE UPDATED ICON --- */}
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="mr-3 text-[var(--color-primary-action)] fa-fw"
+                  aria-hidden="true"
+                />
                 <a
                   href="https://www.facebook.com/profile.php?id=100063700055587"
                   target="_blank"
@@ -64,7 +92,7 @@ const Footer = () => {
               </li>
             </ul>
             <p className="mt-4 text-xs text-[var(--color-text-muted)] bg-white/50 p-2 rounded-md inline-block">
-              <i className="fa-solid fa-user-nurse mr-1.5"></i>
+              <FontAwesomeIcon icon={faUserNurse} className="mr-1.5 fa-fw" aria-hidden="true" />
               Nurse call-in starts at 7:30 AM (M-F)
             </p>
           </div>
@@ -93,7 +121,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="mb-6 inline-flex w-full lg:w-auto items-center justify-center rounded-md bg-[var(--color-secondary-accent)] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all hover:bg-[#005f91] hover:shadow-md">
-              <i className="fa-solid fa-lock mr-2"></i>
+              <FontAwesomeIcon icon={faLock} className="mr-2 fa-fw" aria-hidden="true" />
               Secure Patient Portal
             </a>
             <nav
