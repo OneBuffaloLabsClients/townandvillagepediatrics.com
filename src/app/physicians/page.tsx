@@ -8,24 +8,24 @@ export const metadata = {
 
 const physicians = [
   {
-    name: 'Sheliah J. Roehmholdt, M.D., F.A.A.P.',
-    bio: 'After having started a career as a pharmacist, Dr. Roehmholdt trained locally in pediatrics, and has been practicing since 1991. As a mother of three children, she has brought with her the personal and professional expertise of balancing the challenges of motherhood with that of career. Dr. Roehmholdt has special interests in breastfeeding, the healthcare of young women, and the special needs of handicapped children.',
-    imageUrl: 'https://placehold.co/400x500/e2e8f0/1e293b?text=Dr.+Roehmholdt',
+    name: 'Lisa Samuels - M.D., F.A.A.P.',
+    bio: "Raised in the Buffalo area, Dr. Samuels graduated from University at Buffalo and went on to pursue a masters degree in Biochemistry and ultimately her medical degree from UB. She trained in pediatrics as a Generalist Scholar at Oishei Children's Hospital where she was honored by induction to the Gold Humanism Honor Society. Dr. Samuels joined the Town & Pediatrics practice in 2024. In her free time, Dr. Samuels and her family enjoy nature and cooking together.",
+    imageUrl: '/images/team/samuels.webp',
   },
   {
     name: 'Erin L. Watson, M.D., F.A.A.P.',
-    bio: 'After growing up in nearby Bradford, Pennsylvania, Dr. Watson completed her undergraduate degree with a major in chemistry at Haverford College where she became a Phi Beta Kappa member and was awarded the Howard Hughes Medical Institute Scholarship. She went on to medical school at the University of Pennsylvania in Philadelphia where she was awarded the Marian Wettrick Scholarship. Dr. Watson then completed her pediatrics residency at Johns Hopkins Hospital in Baltimore, Maryland. She joined Town & Village Pediatrics in 2004. Dr. Watson and her husband reside in Williamsville with their young sons.',
-    imageUrl: 'https://placehold.co/400x500/e2e8f0/1e293b?text=Dr.+Watson',
+    bio: 'After growing up in nearby Bradford, Pennsylvania, Dr. Watson completed her undergraduate degree with a major in chemistry at Haverford College, where she became a Phi Beta Kappa member and was awarded the Howard Hughes Medical Institute Scholarship. She went on to medical school at the University of Pennsylvania in Philadelphia, where she was awarded the Marian Wettrick Scholarship. Dr. Watson then completed her pediatrics residency at Johns Hopkins Hospital in Baltimore, Maryland. She joined Town & Village Pediatrics in 2004. Dr. Watson and her husband reside in Williamsville with their sons.',
+    imageUrl: '/images/team/watson.webp',
   },
   {
     name: 'Jennifer L. Trask, M.D., M.S., F.A.A.P.',
-    bio: "Born and raised in the Buffalo area, Dr. Trask graduated magna cum laude from SUNYAB where she went on to get her M.S. while doing research at Roswell Park Cancer Institute. She remained at SUNYAB for her M.D. degree and was awarded the Children's Hospital Prize for Excellence in Understanding Disease in Children. She completed her residency at Buffalo Women and Children's Hospital where she received the Resident Teaching Award in 2004, the Theodore T. Putnam Award in 2006 and was selected and served as Pediatric Chief Resident.",
-    imageUrl: 'https://placehold.co/400x500/e2e8f0/1e293b?text=Dr.+Trask',
+    bio: 'Born and raised in the Buffalo area, Dr. Trask graduated magna cum laude from SUNYAB where she went on to get her M.S. while doing research at Roswell Park Cancer Institute. She remained at SUNYAB for her M.D. degree and was awarded the Children’s Hospital Prize for Excellence in Understanding Disease in Children. She completed her residency at Buffalo Women and Children’s hospital, where she received the Resident Teaching Award in 2006 and was selected and served as Pediatric Chief Resident. Dr. Trask joined our practice in August 2006 and enjoys spending time with her family hiking, skiing and seeing live music.',
+    imageUrl: '/images/team/trask.webp',
   },
   {
     name: 'Amos Moberg, M.D., F.A.A.P.',
-    bio: "Originating from Central New York, Dr. Moberg was drawn to Buffalo for his education. After graduating magna cum laude from the University at Buffalo and receiving his medical degree, he trained in pediatrics as a Generalist Scholar at The Women's and Children's Hospital of Buffalo. Along the way, Dr. Moberg has developed a particular interest in issues involving adolescent health, and childhood nutrition and obesity. He has conducted research investigating local trends in childhood obesity and breastfeeding. He is a member of several medical organizations. In his free time, Dr. Moberg remains dedicated to his family and his community.",
-    imageUrl: 'https://placehold.co/400x500/e2e8f0/1e293b?text=Dr.+Moberg',
+    bio: 'Originating from Central New York, Dr. Moberg was drawn to Buffalo for his education. After graduating magna cum laude from the University at Buffalo and receiving his medical degree, he trained in pediatrics as a Generalist Scholar at The Women and Children’s Hospital of Buffalo. Along the way, Dr. Moberg has developed a particular interest in issues involving adolescent health and childhood nutrition and obesity. He is a member of several medical organizations and is currently involved in the American Academy of Pediatrics. He joined Town & Village Pediatrics in 2010 and dedicates his free time to his family and his community.',
+    imageUrl: '/images/team/moberg.webp',
   },
 ];
 
@@ -51,14 +51,14 @@ export default function PhysiciansPage() {
             <section
               key={physician.name}
               aria-labelledby={`physician-${index}`}
-              className="flex flex-col md:flex-row gap-8 items-start bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
+              className="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
               {/* Image Container */}
               <div className="relative w-full md:w-1/3 aspect-[3/4] md:aspect-auto md:h-72 flex-shrink-0 overflow-hidden rounded-xl bg-gray-100">
                 <Image
                   src={physician.imageUrl}
                   alt={`Portrait of ${physician.name}`}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
