@@ -137,13 +137,13 @@ const ParentsCorner = () => {
                     through your patient portal.
                   </p>
                   <p className="pt-2 border-t border-gray-200">
-                    <strong>Need records?</strong>{' '}
-                    <a
-                      href="/forms/release-form.pdf"
-                      target="_blank"
+                    <strong>Looking for forms?</strong>{' '}
+                    <Link
+                      href="/downloads"
                       className="text-[var(--color-primary-action)] font-semibold hover:underline">
-                      Click here to download our Release of Medical Information Form.
-                    </a>
+                      Visit our new Downloads page
+                    </Link>{' '}
+                    for the New Patient History Form, Medical Release Form, dosing charts, and more.
                   </p>
                 </div>
               </article>

@@ -34,6 +34,17 @@ const Footer = () => {
                 <i className="fa-solid fa-fax mr-3 text-[var(--color-primary-action)]"></i>
                 <span>(716) 631-8690</span>
               </p>
+              <p className="flex items-center">
+                <i className="fa-brands fa-facebook mr-3 text-[var(--color-primary-action)]"></i>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100063700055587"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--color-secondary-accent)] transition-colors"
+                  aria-label="Visit our Facebook page (opens in a new tab)">
+                  Follow us on Facebook
+                </a>
+              </p>
             </address>
           </div>
 
@@ -88,6 +99,9 @@ const Footer = () => {
             <nav
               className="grid grid-cols-2 gap-2 text-sm lg:text-right w-full"
               aria-label="Footer Navigation">
+              <Link href="/" className="hover:text-[var(--color-secondary-accent)] hover:underline">
+                Home
+              </Link>
               <Link
                 href="/physicians"
                 className="hover:text-[var(--color-secondary-accent)] hover:underline">
@@ -101,12 +115,22 @@ const Footer = () => {
               <Link
                 href="/parents-corner"
                 className="hover:text-[var(--color-secondary-accent)] hover:underline">
-                Resources
+                Parents Corner
+              </Link>
+              <Link
+                href="/expectant-parents"
+                className="hover:text-[var(--color-secondary-accent)] hover:underline">
+                Expectant Parents
+              </Link>
+              <Link
+                href="/downloads"
+                className="hover:text-[var(--color-secondary-accent)] hover:underline">
+                Downloads
               </Link>
               <Link
                 href="/contact"
                 className="hover:text-[var(--color-secondary-accent)] hover:underline">
-                Directions
+                Contact
               </Link>
             </nav>
           </div>
@@ -139,11 +163,6 @@ const Footer = () => {
               href="/privacy-practice-notice"
               className="hover:text-[var(--color-text-primary)] transition-colors">
               Privacy Practice Notice
-            </Link>
-            <Link
-              href="/accessibility"
-              className="hover:text-[var(--color-text-primary)] transition-colors">
-              Accessibility
             </Link>
           </div>
         </div>
