@@ -131,9 +131,9 @@ const Footer = () => {
           </p>
           <div className="mt-4 flex justify-center space-x-4 text-xs">
             <Link
-              href="/privacy"
+              href="/privacy-statement"
               className="hover:text-[var(--color-text-primary)] transition-colors">
-              Privacy Policy
+              Privacy Statement
             </Link>
             <Link
               href="/accessibility"

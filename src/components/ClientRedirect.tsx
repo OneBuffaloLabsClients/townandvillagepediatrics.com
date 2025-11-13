@@ -14,7 +14,8 @@ const redirects: Record<string, string> = {
   '/location.php': '/contact',
   '/about.php': '/physicians',
   '/parents-corner.php': '/parents-corner',
-  'new-patients.php': '/new-patients',
+  '/new-patients.php': '/new-patients',
+  '/privacy-statement.php': '/privacy-statement',
 };
 
 export default function ClientRedirect({ children }: { children: React.ReactNode }) {
