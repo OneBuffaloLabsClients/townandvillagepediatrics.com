@@ -16,6 +16,7 @@ const redirects: Record<string, string> = {
   '/parents-corner.php': '/parents-corner',
   '/new-patients.php': '/new-patients',
   '/privacy-statement.php': '/privacy-statement',
+  '/privacy-practice-notice.php': '/privacy-practice-notice',
 };
 
 export default function ClientRedirect({ children }: { children: React.ReactNode }) {

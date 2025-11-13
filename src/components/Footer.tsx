@@ -136,6 +136,11 @@ const Footer = () => {
               Privacy Statement
             </Link>
             <Link
+              href="/privacy-practice-notice"
+              className="hover:text-[var(--color-text-primary)] transition-colors">
+              Privacy Practice Notice
+            </Link>
+            <Link
               href="/accessibility"
               className="hover:text-[var(--color-text-primary)] transition-colors">
               Accessibility
