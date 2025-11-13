@@ -139,7 +139,7 @@ const ParentsCorner = () => {
                   <p className="pt-2 border-t border-gray-200">
                     <strong>Need records?</strong>{' '}
                     <a
-                      href="/forms/releaseForm.docx"
+                      href="/forms/release-form.pdf"
                       target="_blank"
                       className="text-[var(--color-primary-action)] font-semibold hover:underline">
                       Click here to download our Release of Medical Information Form.
