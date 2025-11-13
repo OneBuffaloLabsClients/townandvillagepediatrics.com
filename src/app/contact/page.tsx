@@ -1,6 +1,19 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCircleInfo,
+  faLocationDot,
+  faPhone,
+  faFax,
+  faClock,
+  faUserNurse,
+  faCircleCheck,
+  faCircleExclamation,
+  faSpinner,
+  faPaperPlane,
+} from '@fortawesome/free-solid-svg-icons';
 
 // No metadata export here because this is a client component.
 // You should add metadata in a separate layout.tsx or page.tsx server component if needed for SEO on this specific route.
@@ -72,12 +85,16 @@ export default function ContactPage() {
               <h2
                 id="contact-info-heading"
                 className="text-2xl font-bold text-[var(--color-secondary-accent)] mb-6 flex items-center">
-                <i className="fa-solid fa-circle-info mr-3"></i>
+                <FontAwesomeIcon icon={faCircleInfo} className="mr-3 fa-fw" aria-hidden="true" />
                 Contact Information
               </h2>
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-6 text-[var(--color-text-primary)]">
                 <div className="flex items-start">
-                  <i className="fa-solid fa-location-dot text-[var(--color-primary-action)] mt-1 mr-4 text-xl"></i>
+                  <FontAwesomeIcon
+                    icon={faLocationDot}
+                    className="text-[var(--color-primary-action)] mt-1 mr-4 text-xl fa-fw"
+                    aria-hidden="true"
+                  />
                   <div>
                     <strong className="block text-lg mb-1">Address</strong>
                     <p>
@@ -88,7 +105,11 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <i className="fa-solid fa-phone text-[var(--color-primary-action)] mt-1 mr-4 text-xl"></i>
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    className="text-[var(--color-primary-action)] mt-1 mr-4 text-xl fa-fw"
+                    aria-hidden="true"
+                  />
                   <div>
                     <strong className="block text-lg mb-1">Phone</strong>
                     <a
@@ -99,7 +120,11 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <i className="fa-solid fa-fax text-[var(--color-primary-action)] mt-1 mr-4 text-xl"></i>
+                  <FontAwesomeIcon
+                    icon={faFax}
+                    className="text-[var(--color-primary-action)] mt-1 mr-4 text-xl fa-fw"
+                    aria-hidden="true"
+                  />
                   <div>
                     <strong className="block text-lg mb-1">Fax</strong>
                     <p className="text-lg">(716) 631-8690</p>
@@ -112,7 +137,7 @@ export default function ContactPage() {
               <h2
                 id="hours-heading"
                 className="text-2xl font-bold text-[var(--color-secondary-accent)] mb-6 flex items-center">
-                <i className="fa-solid fa-clock mr-3"></i>
+                <FontAwesomeIcon icon={faClock} className="mr-3 fa-fw" aria-hidden="true" />
                 Office Hours
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -130,7 +155,7 @@ export default function ContactPage() {
                     </li>
                   </ul>
                   <p className="mt-4 text-sm text-[var(--color-text-muted)] bg-gray-50 p-2 rounded">
-                    <i className="fa-solid fa-user-nurse mr-2"></i>
+                    <FontAwesomeIcon icon={faUserNurse} className="mr-2 fa-fw" aria-hidden="true" />
                     Nurse call-in starts at 7:30 AM (M-F)
                   </p>
                 </div>
@@ -183,9 +208,17 @@ export default function ContactPage() {
                       : 'bg-red-50 text-red-800 border border-red-200'
                   }`}>
                   {formStatus.type === 'success' ? (
-                    <i className="fa-solid fa-circle-check mr-2"></i>
+                    <FontAwesomeIcon
+                      icon={faCircleCheck}
+                      className="mr-2 fa-fw"
+                      aria-hidden="true"
+                    />
                   ) : (
-                    <i className="fa-solid fa-circle-exclamation mr-2"></i>
+                    <FontAwesomeIcon
+                      icon={faCircleExclamation}
+                      className="mr-2 fa-fw"
+                      aria-hidden="true"
+                    />
                   )}
                   {formStatus.message}
                 </div>
@@ -244,13 +277,22 @@ export default function ContactPage() {
                 className="w-full bg-[var(--color-primary-action)] text-white font-bold py-4 px-6 rounded-lg hover:bg-[#7a9136] transition-all focus:outline-none focus:ring-4 focus:ring-[var(--color-primary-action)]/50 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center">
                 {isSubmitting ? (
                   <>
-                    <i className="fa-solid fa-spinner fa-spin mr-2"></i>
+                    <FontAwesomeIcon
+                      icon={faSpinner}
+                      spin
+                      className="mr-2 fa-fw"
+                      aria-hidden="true"
+                    />
                     Sending...
                   </>
                 ) : (
                   <>
                     Send Message
-                    <i className="fa-solid fa-paper-plane ml-2"></i>
+                    <FontAwesomeIcon
+                      icon={faPaperPlane}
+                      className="ml-2 fa-fw"
+                      aria-hidden="true"
+                    />
                   </>
                 )}
               </button>
