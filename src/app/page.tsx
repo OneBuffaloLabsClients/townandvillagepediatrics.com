@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { getHomePageData } from '@/lib/cms';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -3,6 +3,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faPhone,
+  faArrowUpRightFromSquare,
+  faXmark,
+  faBars,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -56,7 +63,8 @@ const Header = () => {
             <a
               href="tel:7166336988"
               className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-secondary-accent)]">
-              <i className="fa-solid fa-phone mr-2"></i>(716) 633-6988
+              <FontAwesomeIcon icon={faPhone} className="mr-2 fa-fw" aria-hidden="true" />
+              (716) 633-6988
             </a>
             <a
               href="https://www.medentmobile.com/portal/index.php?practice_id=Ji6KGx7c"
@@ -65,7 +73,11 @@ const Header = () => {
               className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary-action)] px-6 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-[#7a9136] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-action)] focus:ring-offset-2"
               aria-label="Open Patient Portal in a new tab">
               Patient Portal
-              <i className="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+              <FontAwesomeIcon
+                icon={faArrowUpRightFromSquare}
+                className="ml-2 text-xs fa-fw"
+                aria-hidden="true"
+              />
             </a>
           </div>
 
@@ -78,9 +90,9 @@ const Header = () => {
             aria-label="Toggle main menu">
             <span className="sr-only">Open main menu</span>
             {isMobileMenuOpen ? (
-              <i className="fa-solid fa-xmark text-2xl"></i>
+              <FontAwesomeIcon icon={faXmark} className="text-2xl fa-fw" aria-hidden="true" />
             ) : (
-              <i className="fa-solid fa-bars text-2xl"></i>
+              <FontAwesomeIcon icon={faBars} className="text-2xl fa-fw" aria-hidden="true" />
             )}
           </button>
         </div>
@@ -107,7 +119,7 @@ const Header = () => {
               <a
                 href="tel:7166336988"
                 className="flex items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-base font-medium text-[var(--color-text-primary)] transition hover:bg-gray-200">
-                <i className="fa-solid fa-phone mr-2"></i> Call Us
+                <FontAwesomeIcon icon={faPhone} className="mr-2 fa-fw" aria-hidden="true" /> Call Us
               </a>
               <a
                 href="https://www.medentmobile.com/portal/index.php?practice_id=Ji6KGx7c"
