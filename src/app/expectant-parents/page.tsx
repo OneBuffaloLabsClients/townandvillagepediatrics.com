@@ -116,12 +116,6 @@ const ExpectantParents = () => {
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
               Call (716) 633-6988
             </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-[var(--color-primary-action)] px-6 py-3 text-base font-bold text-white shadow-sm transition-all hover:bg-[#7a9136]">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-              Send Us a Message
-            </Link>
           </div>
         </div>
       </section>

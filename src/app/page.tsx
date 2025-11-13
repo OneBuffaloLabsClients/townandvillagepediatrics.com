@@ -35,11 +35,6 @@ export default async function HomePage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-[var(--color-primary-action)] px-6 py-3 text-base font-bold text-white shadow-sm transition-all hover:bg-[#7a9136] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-action)] focus:ring-offset-2">
-                  Schedule an Appointment
-                </Link>
-                <Link
                   href="/new-patients"
                   className="inline-flex items-center justify-center rounded-md bg-white px-6 py-3 text-base font-bold text-[var(--color-secondary-accent)] shadow-sm ring-1 ring-inset ring-gray-300 transition-all hover:bg-gray-50">
                   New Patient Info

@@ -124,12 +124,6 @@ const NewPatientsPage = () => {
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
               Call (716) 633-6988
             </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-white px-6 py-3 text-base font-bold text-[var(--color-secondary-accent)] shadow-sm ring-1 ring-inset ring-gray-300 transition-all hover:bg-gray-50 w-full sm:w-auto">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-              Send Us a Message
-            </Link>
           </div>
         </div>
       </section>

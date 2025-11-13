@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleInfo,
-  faHospital,
   faCalendarCheck,
   faFileMedical,
   faPrescriptionBottleMedical,
@@ -12,6 +11,12 @@ import {
   faArrowUpRightFromSquare,
   faShieldVirus,
 } from '@fortawesome/free-solid-svg-icons';
+
+export const metadata = {
+  title: 'Parents Corner | Town and Village Pediatrics',
+  description:
+    'Find essential parent resources at Town and Village Pediatrics, including checkup schedules, office policies, dosing charts for Tylenol and Motrin, and our vaccine statement.',
+};
 
 const ParentsCorner = () => {
   return (
@@ -36,10 +41,10 @@ const ParentsCorner = () => {
       {/* --- SECTION 1: GENERAL INFORMATION --- */}
       <section
         id="general-info"
-        className="py-16 sm:py-24 bg-[var(--color-background-primary)]"
+        className="py-8 sm:py-16 bg-[var(--color-background-primary)]"
         aria-labelledby="general-info-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-12">
+          <div className="flex items-center gap-3 mb-12 max-w-4xl mx-auto">
             <FontAwesomeIcon
               icon={faCircleInfo}
               className="text-3xl text-[var(--color-primary-action)]"
@@ -51,135 +56,107 @@ const ParentsCorner = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16">
-            {/* Left Column */}
-            <div className="space-y-12">
-              {/* Hospital Affiliations */}
-              <article aria-labelledby="affiliations-heading">
-                <h3
-                  id="affiliations-heading"
-                  className="flex items-center text-xl font-bold text-[var(--color-text-primary)] mb-4">
-                  <FontAwesomeIcon
-                    icon={faHospital}
-                    className="text-[var(--color-secondary-accent)] mr-3 w-6"
-                  />
-                  Hospital Affiliations
-                </h3>
-                <p className="text-[var(--color-text-muted)] mb-3">
-                  We are proud to be affiliated with the following hospitals for newborn visits and
-                  care:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[var(--color-text-primary)] ml-2">
-                  <li>Women and Children&apos;s Hospital of Buffalo</li>
-                  <li>Millard Fillmore Suburban Hospital</li>
-                  <li>Sisters of Charity Hospital</li>
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Routine Schedule */}
+            <article
+              aria-labelledby="schedule-heading"
+              className="bg-[var(--color-background-alt)] p-6 rounded-2xl border border-gray-100">
+              <h3
+                id="schedule-heading"
+                className="flex items-center text-xl font-bold text-[var(--color-secondary-accent)] mb-4">
+                <FontAwesomeIcon icon={faCalendarCheck} className="mr-3 w-6" />
+                Routine Checkup Schedule
+              </h3>
+              <p className="text-sm text-[var(--color-text-primary)] mb-4 leading-relaxed">
+                The American Academy of Pediatrics recommends routine well-child exams to promote
+                physical, mental, and social health. We will see your child at the following ages:
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm font-medium text-[var(--color-text-primary)]">
+                <ul className="space-y-2">
+                  <li>• At birth (hospital)</li>
+                  <li>• 2 weeks</li>
+                  <li>• 1 month</li>
+                  <li>• 2 months</li>
+                  <li>• 4 months</li>
                 </ul>
-              </article>
+                <ul className="space-y-2">
+                  <li>• 6 months</li>
+                  <li>• 9 months</li>
+                  <li>• 12 months</li>
+                  <li>• 15 months</li>
+                  <li>• 18 months</li>
+                </ul>
+                <ul className="space-y-2">
+                  <li>• 24 months (2 years)</li>
+                  <li>• 30 months</li>
+                  <li>• 36 months (3 years)</li>
+                  <li>• Yearly thereafter</li>
+                </ul>
+              </div>
+            </article>
 
-              {/* Routine Schedule */}
-              <article
-                aria-labelledby="schedule-heading"
-                className="bg-[var(--color-background-alt)] p-6 rounded-2xl border border-gray-100">
-                <h3
-                  id="schedule-heading"
-                  className="flex items-center text-xl font-bold text-[var(--color-secondary-accent)] mb-4">
-                  <FontAwesomeIcon icon={faCalendarCheck} className="mr-3 w-6" />
-                  Routine Checkup Schedule
-                </h3>
-                <p className="text-sm text-[var(--color-text-primary)] mb-4 leading-relaxed">
-                  The American Academy of Pediatrics recommends routine well-child exams to promote
-                  physical, mental, and social health. We will see your child at the following ages:
+            {/* Forms */}
+            <article aria-labelledby="forms-heading">
+              <h3
+                id="forms-heading"
+                className="flex items-center text-xl font-bold text-[var(--color-secondary-accent)] mb-4">
+                <FontAwesomeIcon
+                  icon={faFileMedical}
+                  className="text-[var(--color-secondary-accent)] mr-3 w-6"
+                />
+                Physical Forms & Records
+              </h3>
+              <div className="space-y-4 text-[var(--color-text-muted)] leading-relaxed">
+                <p>
+                  You will be provided a completed physical exam form and vaccine record for your
+                  child at every check-up. This form may be used for 12 months for sports, school,
+                  and all related activities. You are encouraged to keep a copy of it at home for
+                  these purposes. If you require additional forms, please request these forms
+                  through your patient portal.
                 </p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm font-medium text-[var(--color-text-primary)]">
-                  <ul className="space-y-2">
-                    <li>• At birth (hospital)</li>
-                    <li>• 2 weeks</li>
-                    <li>• 1 month</li>
-                    <li>• 2 months</li>
-                    <li>• 4 months</li>
-                  </ul>
-                  <ul className="space-y-2">
-                    <li>• 6 months</li>
-                    <li>• 9 months</li>
-                    <li>• 12 months</li>
-                    <li>• 15 months</li>
-                    <li>• 18 months</li>
-                  </ul>
-                  <ul className="space-y-2">
-                    <li>• 24 months (2 years)</li>
-                    <li>• 30 months</li>
-                    <li>• 36 months (3 years)</li>
-                    <li>• Yearly thereafter</li>
-                  </ul>
-                </div>
-              </article>
-            </div>
+                <p className="pt-2 border-t border-gray-200">
+                  <strong>Looking for forms?</strong>{' '}
+                  <Link
+                    href="/downloads"
+                    className="text-[var(--color-primary-action)] font-semibold hover:underline">
+                    Visit our new Downloads page
+                  </Link>{' '}
+                  for the New Patient History Form, Medical Release Form, dosing charts, and more.
+                </p>
+              </div>
+            </article>
 
-            {/* Right Column: Administrative */}
-            <div className="space-y-10">
-              {/* Forms */}
-              <article aria-labelledby="forms-heading">
-                <h3
-                  id="forms-heading"
-                  className="flex items-center text-xl font-bold text-[var(--color-text-primary)] mb-4">
+            {/* Policies */}
+            <article aria-labelledby="policies-heading" className="space-y-6">
+              <h3 id="policies-heading" className="sr-only">
+                Office Policies
+              </h3>
+
+              <div>
+                <h4 className="flex items-center text-lg font-bold text-[var(--color-text-primary)] mb-2">
                   <FontAwesomeIcon
-                    icon={faFileMedical}
+                    icon={faPrescriptionBottleMedical}
                     className="text-[var(--color-secondary-accent)] mr-3 w-6"
                   />
-                  Physical Forms & Records
-                </h3>
-                <div className="space-y-4 text-[var(--color-text-muted)] leading-relaxed">
-                  <p>
-                    You will be provided a completed physical exam form and vaccine record for your
-                    child at every check-up. This form may be used for 12 months for sports, school,
-                    and all related activities. You are encouraged to keep a copy of it at home for
-                    these purposes. If you require additional forms, please request these forms
-                    through your patient portal.
-                  </p>
-                  <p className="pt-2 border-t border-gray-200">
-                    <strong>Looking for forms?</strong>{' '}
-                    <Link
-                      href="/downloads"
-                      className="text-[var(--color-primary-action)] font-semibold hover:underline">
-                      Visit our new Downloads page
-                    </Link>{' '}
-                    for the New Patient History Form, Medical Release Form, dosing charts, and more.
-                  </p>
-                </div>
-              </article>
+                  Prescription Refills
+                </h4>
+                <p className="text-[var(--color-text-muted)] ml-9">
+                  Please call us with refill requests. Allow several days for non-urgent medication
+                  requests.
+                </p>
+              </div>
 
-              {/* Policies */}
-              <article aria-labelledby="policies-heading" className="space-y-6">
-                <h3 id="policies-heading" className="sr-only">
-                  Office Policies
-                </h3>
-
-                <div>
-                  <h4 className="flex items-center text-lg font-bold text-[var(--color-text-primary)] mb-2">
-                    <FontAwesomeIcon
-                      icon={faPrescriptionBottleMedical}
-                      className="text-[var(--color-secondary-accent)] mr-3 w-6"
-                    />
-                    Prescription Refills
-                  </h4>
-                  <p className="text-[var(--color-text-muted)] ml-9">
-                    Please call us with refill requests. Allow several days for non-urgent
-                    medication requests.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="flex items-center text-lg font-bold text-red-700 mb-2">
-                    <FontAwesomeIcon icon={faTriangleExclamation} className="mr-3 w-6" />
-                    Missed Appointments
-                  </h4>
-                  <p className="text-[var(--color-text-muted)] ml-9">
-                    You will be charged <strong>$25</strong> per missed appointment or cancellation
-                    made less than 24 hours before the scheduled time.
-                  </p>
-                </div>
-              </article>
-            </div>
+              <div>
+                <h4 className="flex items-center text-lg font-bold text-red-700 mb-2">
+                  <FontAwesomeIcon icon={faTriangleExclamation} className="mr-3 w-6" />
+                  Missed Appointments
+                </h4>
+                <p className="text-[var(--color-text-muted)] ml-9">
+                  You will be charged <strong>$25</strong> per missed appointment or cancellation
+                  made less than 24 hours before the scheduled time.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -225,7 +202,7 @@ const ParentsCorner = () => {
           </div>
 
           <div className="mb-8">
-            <h3 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
+            <h3 className="text-2xl font-bold text-[var(--color-secondary-accent)] mb-4">
               Dosing Guidelines
             </h3>
             <p className="text-[var(--color-text-muted)] max-w-3xl">
@@ -330,7 +307,7 @@ const ParentsCorner = () => {
             {/* Ibuprofen Table */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
               <div className="p-6 bg-orange-50/50 border-b border-orange-100">
-                <h3 className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">
+                <h3 className="text-2xl font-bold text-[var(--color-secondary-accent)] mb-2">
                   Ibuprofen (Motrin&#0174; / Advil&#0174;)
                 </h3>
                 <p className="text-[var(--color-text-muted)]">

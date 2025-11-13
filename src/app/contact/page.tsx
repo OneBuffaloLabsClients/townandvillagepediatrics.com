@@ -1,6 +1,3 @@
-'use client';
-
-import { useState, FormEvent } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleInfo,
@@ -9,64 +6,15 @@ import {
   faFax,
   faClock,
   faUserNurse,
-  faCircleCheck,
-  faCircleExclamation,
-  faSpinner,
-  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 
-// No metadata export here because this is a client component.
-// You should add metadata in a separate layout.tsx or page.tsx server component if needed for SEO on this specific route.
+export const metadata = {
+  title: 'Contact | Town and Village Pediatrics',
+  description:
+    'Contact Town and Village Pediatrics in Williamsville, NY. Find our office address, phone number, and hours. We look forward to hearing from you.',
+};
 
 export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formStatus, setFormStatus] = useState<{
-    message: string;
-    type: 'success' | 'error';
-  } | null>(null);
-
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setIsSubmitting(true);
-    setFormStatus(null);
-
-    const formData = new FormData(event.currentTarget);
-    // Web3Forms Access Key
-    // TODO: Replace with your actual access key
-    formData.append('access_key', '');
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setFormStatus({
-          message: 'Thank you! Your message has been sent. We will be in touch shortly.',
-          type: 'success',
-        });
-        (event.target as HTMLFormElement).reset();
-      } else {
-        console.error('Form Error:', data);
-        setFormStatus({
-          message: 'Something went wrong. Please try again later or call us directly.',
-          type: 'error',
-        });
-      }
-    } catch (error) {
-      console.error('Network Error:', error);
-      setFormStatus({
-        message: 'Network error. Please check your connection and try again.',
-        type: 'error',
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-[var(--color-background-alt)]">
       {/* Page Header */}
@@ -78,7 +26,8 @@ export default function ContactPage() {
       </section>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        {/* Centered content container */}
+        <div className="max-w-4xl mx-auto">
           {/* --- Contact Information & Hours --- */}
           <div className="space-y-12">
             <section aria-labelledby="contact-info-heading">
@@ -176,131 +125,6 @@ export default function ContactPage() {
               </div>
             </section>
           </div>
-
-          {/* --- Contact Form --- */}
-          <section
-            aria-labelledby="form-heading"
-            className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border-t-4 border-[var(--color-primary-action)]">
-            <h2
-              id="form-heading"
-              className="text-3xl font-bold text-[var(--color-secondary-accent)] mb-6">
-              Send Us a Message
-            </h2>
-            <p className="mb-8 text-[var(--color-text-muted)]">
-              For non-urgent inquiries, please fill out the form below. For medical emergencies,
-              please call 911.
-            </p>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Hidden Honeypot Field for Spam Protection */}
-              <input
-                type="checkbox"
-                name="botcheck"
-                className="hidden"
-                style={{ display: 'none' }}
-              />
-
-              {formStatus && (
-                <div
-                  className={`p-4 rounded-lg text-sm font-medium ${
-                    formStatus.type === 'success'
-                      ? 'bg-green-50 text-green-800 border border-green-200'
-                      : 'bg-red-50 text-red-800 border border-red-200'
-                  }`}>
-                  {formStatus.type === 'success' ? (
-                    <FontAwesomeIcon
-                      icon={faCircleCheck}
-                      className="mr-2 fa-fw"
-                      aria-hidden="true"
-                    />
-                  ) : (
-                    <FontAwesomeIcon
-                      icon={faCircleExclamation}
-                      className="mr-2 fa-fw"
-                      aria-hidden="true"
-                    />
-                  )}
-                  {formStatus.message}
-                </div>
-              )}
-
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
-                  Full Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--color-secondary-accent)] focus:border-transparent transition-all outline-none"
-                  placeholder="Jane Doe"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
-                  Phone Number <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--color-secondary-accent)] focus:border-transparent transition-all outline-none"
-                  placeholder="(716) 555-0123"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
-                  Message <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--color-secondary-accent)] focus:border-transparent transition-all outline-none resize-y"
-                  placeholder="How can we help you?"></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-[var(--color-primary-action)] text-white font-bold py-4 px-6 rounded-lg hover:bg-[#7a9136] transition-all focus:outline-none focus:ring-4 focus:ring-[var(--color-primary-action)]/50 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center">
-                {isSubmitting ? (
-                  <>
-                    <FontAwesomeIcon
-                      icon={faSpinner}
-                      spin
-                      className="mr-2 fa-fw"
-                      aria-hidden="true"
-                    />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Message
-                    <FontAwesomeIcon
-                      icon={faPaperPlane}
-                      className="ml-2 fa-fw"
-                      aria-hidden="true"
-                    />
-                  </>
-                )}
-              </button>
-              <p className="text-xs text-center text-[var(--color-text-muted)] mt-4">
-                By submitting this form, you agree to our privacy policy.
-              </p>
-            </form>
-          </section>
         </div>
       </div>
 
