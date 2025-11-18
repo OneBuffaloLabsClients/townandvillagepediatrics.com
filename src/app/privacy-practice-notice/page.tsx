@@ -105,7 +105,7 @@ const PrivacyPracticeNoticePage = () => {
             <h2>B. IF YOU HAVE QUESTIONS ABOUT THIS NOTICE, PLEASE CONTACT:</h2>
             <address className="not-italic bg-[var(--color-background-alt)] p-6 rounded-lg border border-gray-200">
               <strong className="block text-lg text-[var(--color-text-primary)]">
-                Erin Watson, MD or Charlene Cleary
+                Dr. Erin Watson, MD or Charlene Cleary
               </strong>
               <br />
               Town and Village Pediatrics, LLC
