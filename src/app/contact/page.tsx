@@ -90,10 +90,10 @@ export default function ContactPage() {
                 Office Hours
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Winter Hours */}
+                {/* Office Hours */}
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                   <h3 className="font-bold text-[var(--color-primary-action)] mb-4 uppercase tracking-wider">
-                    Winter Hours
+                    Office Hours
                   </h3>
                   <ul className="space-y-2 text-[var(--color-text-primary)]">
                     <li className="flex justify-between">

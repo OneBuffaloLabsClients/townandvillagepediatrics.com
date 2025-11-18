@@ -76,10 +76,10 @@ const Footer = () => {
             </address>
           </div>
 
-          {/* Col 2: Winter Hours */}
+          {/* Col 2: Office Hours */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-[var(--color-secondary-accent)] mb-4">
-              Winter Hours
+              Office Hours
             </h3>
             <ul className="space-y-2 text-sm">
               <li className="flex justify-between">
